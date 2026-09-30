@@ -22,7 +22,7 @@
               v-model="nome"
               type="text"
               placeholder="Digite seu nome"
-              maxlength="20"
+              max-length="20"
               @keyup.enter="continuar"
             />
           </ion-item>
