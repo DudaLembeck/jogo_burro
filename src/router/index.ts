@@ -16,7 +16,23 @@ const routes: Array<RouteRecordRaw> = [
     path: '/historico',
     name: 'Historico',
     component: () => import('../views/HistoricoPage.vue')
-  }
+  },
+  {
+  path: '/menu-partida',
+  component: () => import('../views/MenuPartidaPage.vue')
+},
+{
+  path: '/bluetooth',
+  component: () => import('../views/BluetoothPage.vue')
+},
+{
+  path: '/sala-espera',
+  component: () => import('../views/SalaEsperaPage.vue')
+},
+{
+  path: '/jogo',
+  component: () => import('../views/JogoPage.vue')
+}
 ]
 
 const router = createRouter({
