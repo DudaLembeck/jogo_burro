@@ -14,20 +14,64 @@
       </ion-header>
 
       <div id="container">
-        
+
+        <ion-card>
+          <ion-card-header>
+
+            <ion-card-title>JOGO DO BURRO</ion-card-title>
+            <ion-card-subtitle>Bem vindo(a)!</ion-card-subtitle>
+
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <ion-button>JOGAR</ion-button>
+
+            <ion-button @click="irParaHistorico()">HISTÓRICO</ion-button>
+
+          </ion-card-content>
+        </ion-card>
+
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle } from '@ionic/vue';
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function irParaHistorico() {
+  router.push('/historico')
+}
 </script>
 
+
+
+
 <style scoped>
+
+ion-card-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ion-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  width: 400px;
+}
+
 #container {
+  display: flex;
+  justify-content:center ;
   text-align: center;
-  
   position: absolute;
   left: 0;
   right: 0;
