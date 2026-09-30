@@ -191,25 +191,25 @@ async function procurarPartidas() {
     if (!device) {
       throw new Error('Nenhum dispositivo selecionado.');
     }
-    
-localStorage.setItem(
-  'dispositivoBluetooth',
-  JSON.stringify({
-    id: device.deviceId,
-    name: device.name
-  })
-);
 
-    router.push('/sala-espera');
+    localStorage.setItem(
+    'dispositivoBluetooth',
+    JSON.stringify({
+        id: device.deviceId,
+        name: device.name
+    })
+    );
 
-  } catch (error) {
-    console.error(error);
+        router.push('/sala-espera');
 
-    erro.value =
-      'Nenhuma partida foi selecionada.';
-  } finally {
-    carregando.value = false;
-  }
+    } catch (error) {
+        console.error(error);
+
+        erro.value =
+        'Nenhuma partida foi selecionada.';
+    } finally {
+        carregando.value = false;
+    }
 }
 </script>
 
